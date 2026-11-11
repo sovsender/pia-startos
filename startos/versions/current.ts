@@ -1,18 +1,18 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '0.1.0:0',
+  version: '0.1.1:0',
   releaseNotes: {
     en_US:
-      'Initial release: a PIA WireGuard relay that renews itself and is used as a StartOS gateway.',
+      'Documentation fix: the relay uses the kernel WireGuard module. Verified on a StartOS server.',
     es_ES:
-      'Lanzamiento inicial: un relé WireGuard de PIA que se renueva solo y se usa como puerta de enlace de StartOS.',
+      'Corrección de documentación: el relé usa el módulo WireGuard del kernel. Verificado en un servidor StartOS.',
     de_DE:
-      'Erstveröffentlichung: ein PIA-WireGuard-Relay, das sich selbst erneuert und als StartOS-Gateway dient.',
+      'Dokumentationskorrektur: Das Relay nutzt das WireGuard-Kernelmodul. Auf einem StartOS-Server geprüft.',
     pl_PL:
-      'Pierwsze wydanie: przekaźnik WireGuard PIA, który sam się odnawia i działa jako brama StartOS.',
+      'Poprawka dokumentacji: przekaźnik używa modułu WireGuard jądra. Sprawdzono na serwerze StartOS.',
     fr_FR:
-      'Version initiale : un relais WireGuard PIA qui se renouvelle seul et sert de passerelle StartOS.',
+      'Correction de la documentation : le relais utilise le module WireGuard du noyau. Vérifié sur un serveur StartOS.',
   },
   migrations: {
     up: async ({ effects }) => {},

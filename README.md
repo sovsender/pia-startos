@@ -32,7 +32,7 @@ PIA Relay keeps a [Private Internet Access](https://www.privateinternetaccess.co
 
 ## Image and Container Runtime
 
-One image, built from the repo `Dockerfile`: Alpine with `wireguard-go`, `wireguard-tools`, `iproute2`, `iptables`, `curl`, `jq` and `bash`. Upstream publishes no image. The manifest sets `virtualNetworking: true`, which gives the container `/dev/net/tun`; the kernel WireGuard module is not available, so both interfaces run on userspace `wireguard-go`.
+One image, built from the repo `Dockerfile`: Alpine with `wireguard-go`, `wireguard-tools`, `iproute2`, `iptables`, `curl`, `jq` and `bash`. Upstream publishes no image. The manifest sets `virtualNetworking: true`, which gives the container the network privileges to create interfaces. Both interfaces use the host's kernel WireGuard module (confirmed on a StartOS box); `wireguard-go` is installed only as a fallback `wg-quick` uses if the module is missing.
 
 | Property      | Value                                                                                      |
 | ------------- | ------------------------------------------------------------------------------------------ |
